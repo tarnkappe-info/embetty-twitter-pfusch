@@ -56,11 +56,11 @@ def get_profile_image(tweetid):
 
 @app.route('/<tweetid>',  methods = ['GET'])
 def embetty_get_tweet(tweetid):
-    return jsonify(get_tweet(int(tweetid)))
+    return jsonify(get_tweet(str(int(tweetid))))
 
 @app.route('/<tweetid>/profile-image',  methods = ['GET'])
 def embetty_get_tweet_img(tweetid):
-    return get_profile_image(int(tweetid))
+    return get_profile_image(str(int(tweetid)))
 
 
 
